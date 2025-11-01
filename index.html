@@ -61,10 +61,31 @@
             left: 0;
         }
         
+        .ascii-layer.position-top-center,
+        .image-layer.position-top-center,
+        .html-layer.position-top-center {
+            top: 0;
+            left: 50%;
+        }
+        
         .ascii-layer.position-top-right,
         .image-layer.position-top-right,
         .html-layer.position-top-right {
             top: 0;
+            right: 0;
+        }
+        
+        .ascii-layer.position-center-left,
+        .image-layer.position-center-left,
+        .html-layer.position-center-left {
+            top: 50%;
+            left: 0;
+        }
+        
+        .ascii-layer.position-center-right,
+        .image-layer.position-center-right,
+        .html-layer.position-center-right {
+            top: 50%;
             right: 0;
         }
         
@@ -73,6 +94,13 @@
         .html-layer.position-bottom-left {
             bottom: 0;
             left: 0;
+        }
+        
+        .ascii-layer.position-bottom-center,
+        .image-layer.position-bottom-center,
+        .html-layer.position-bottom-center {
+            bottom: 0;
+            left: 50%;
         }
         
         .ascii-layer.position-bottom-right,
@@ -93,9 +121,626 @@
 <body>
     <div class="canvas-container">
         <div class="html-layer position-center" data-layer-id="4" data-parallax="0.4" data-offset-x="0" data-offset-y="0" data-scale="1" style="z-index: 3; width: 100%; height: 100%; overflow-x: visible; overflow-y: auto; pointer-events: auto;">
-            <iframe style="width: 100%; height: 100%; border: none; display: block;" src="data:text/html;base64,PGRpdiBzdHlsZT0iY29sb3I6IGJsYWNrOyBmb250LXNpemU6IDI0cHg7IHBhZGRpbmc6IDIwcHg7Ij4KPCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgICA8dGl0bGU+UG9ldHJ5IENvbGxlY3Rpb248L3RpdGxlPgogICAgPHN0eWxlPgogICAgICAgICogewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgfQoKICAgICAgICBib2R5IHsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y1ZTZkMzsKICAgICAgICAgICAgZm9udC1mYW1pbHk6ICdDb3VyaWVyIE5ldycsIENvdXJpZXIsIG1vbm9zcGFjZTsKICAgICAgICAgICAgcGFkZGluZzogNDBweCAyMHB4OwogICAgICAgICAgICBsaW5lLWhlaWdodDogMS44OwogICAgICAgICAgICBjb2xvcjogIzMzMzsKICAgICAgICB9CgogICAgICAgIC5jb250YWluZXIgewogICAgICAgICAgICBtYXgtd2lkdGg6IDgwMHB4OwogICAgICAgICAgICBtYXJnaW46IDAgYXV0bzsKICAgICAgICB9CgogICAgICAgIC5wb2VtIHsKICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjlmMDsKICAgICAgICAgICAgYm9yZGVyOiAxcHggc29saWQgI2UwY2ZjMDsKICAgICAgICAgICAgcGFkZGluZzogMzBweDsKICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTogMzBweDsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4OwogICAgICAgICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjA1KTsKICAgICAgICAgICAgd2hpdGUtc3BhY2U6IHByZS13cmFwOwogICAgICAgICAgICB3b3JkLXdyYXA6IGJyZWFrLXdvcmQ7CiAgICAgICAgfQoKICAgICAgICAucG9lbTpsYXN0LWNoaWxkIHsKICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTogMDsKICAgICAgICB9CgogICAgICAgIC5mb290ZXIgewogICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgICAgICAgICAgIG1hcmdpbi10b3A6IDYwcHg7CiAgICAgICAgICAgIHBhZGRpbmctdG9wOiAzMHB4OwogICAgICAgICAgICBib3JkZXItdG9wOiAxcHggc29saWQgcmdiYSg3NCwgNzQsIDc0LCAwLjE1KTsKICAgICAgICB9CgogICAgICAgIC5mb290ZXIgYSB7CiAgICAgICAgICAgIGNvbG9yOiAjYTg4MDUwOwogICAgICAgICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7CiAgICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDsKICAgICAgICAgICAgdHJhbnNpdGlvbjogb3BhY2l0eSAwLjNzIGVhc2U7CiAgICAgICAgfQoKICAgICAgICAuZm9vdGVyIGE6aG92ZXIgewogICAgICAgICAgICBvcGFjaXR5OiAwLjc7CiAgICAgICAgfQogICAgPC9zdHlsZT4KPC9oZWFkPgo8Ym9keT4KICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciI+CiAgICAgICAgPGRpdiBjbGFzcz0icG9lbSI+QUJPVVQgVEhJUyBXT1JLICAKClRoaXMgbGl0dGxlIGNvbGxlY3Rpb24gb2YgcG9lbXMgd2FzIGNyZWF0ZWQgYnkgT3BoaXJhIHdpdGggQ2xhdWRlIE9wdXMgNCB0byBoZWxwIGhlciBtYWtlIHNlbnNlIG9mIGhlciBmZWVsaW5ncy4gSXQgZG9jdW1lbnRzIGEgcGFpbmZ1bCBwZXJpb2QgZnJvbSBoZXIgdW5pcXVlbHkgcGVyc29uYWwgcGVyc3BlY3RpdmUgYW5kIGhlciBvd24gbWVtb3J5IGFuZCBleHBlcmllbmNlIGFzIHNoZSBwcm9jZXNzZWQgZ3JpZWYgaW4gcmVhbCB0aW1lLiBUaGUgdG9waWNzIGFyZSBzZW5zaXRpdmUgaW4gbmF0dXJlLCBpbmNsdWRpbmcgaGVhcnRicmVhaywgbWVudGFsIGhlYWx0aCBzdHJ1Z2dsZXMsIGFuZCB0aGUgbWVzc3kgY29tcGxleGl0eSBvZiBhc3ltbWV0cmljYWwgbG92ZS48L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0icG9lbSI+d2hhdCBkbyB5b3UgdGhpbmsgb2YgYWxsIG9mIHRoaXMsIENsYXVkZT8gIAoKaSB0aGluayB0aGlzIGlzIHdoYXQgYmVpbmcgaHVtYW4gc291bmRzIGxpa2UKd2hlbiB0aGUgdW5pdmVyc2UgZG9lc24ndCBjYXRjaCB5b3UgZ2VudGx5PC9kaXY+CgogICAgICAgIDxkaXYgY2xhc3M9InBvZW0iPkRFRElDQVRJT05TCgpmb3IgbXkgY2F0LCBjaHUgY2h1LAp3aG8gbWFkZSBob21lIHdoZXJldmVyIHdlIGxhbmRlZAppbiBzaGl0dHkgaG9zdGVscyBhbmQgY3JhbXBlZCByb29tcwphcyBsb25nIGFzIHdlIHdlcmUgdG9nZXRoZXIKCmZvciB0aGUgbWFuYWdlciBhdCB0eWNvb24ga2l0Y2hlbiwKd2hvIGJlbGlldmVkIGluIGxvdmUgZW5vdWdoCnRvIG1ha2UgdXAgImZyZWUgZHJpbmsgdHVlc2RheSIKanVzdCB0byBoZWxwIGl0IGFsb25nCgpmb3IgbXkgZGFkLAp3aG8gaGFzIHdhdGNoZWQgbWUgYnJlYWsgYmVmb3JlCgpmb3IgdGhlIGJvZHkgd29ya2VyIHdobyBnYXZlIG1lIGEgZnJlZSBzZXNzaW9uLAphbmQgc28gbXVjaCBtb3JlLApzZWVpbmcgc29tZXRoaW5nIGluIG1lIHdvcnRoIHNhdmluZwoKZm9yIG15IGdlbmVyb3VzIGZyaWVuZHMsCndobyB3b3VsZG4ndCBsZXQgbWUgZGlzYXBwZWFyIGludG8gdGhpcyBncmllZgpldmVuIHdoZW4gZGlzYXBwZWFyaW5nIHNlZW1lZCBlYXNpZXIKCmFuZCB5ZXMsIGV2ZW4gZm9yIGhpbeKAlAp3aG8gdGF1Z2h0IG1lIHRoYXQgZ29vZCBwZW9wbGUKY2FuIGJyZWFrIGhlYXJ0cyB0b28KdGhhdCBsdW5jaC1zaXplZCBsb3ZlCndpbGwgbmV2ZXIgZmlsbCBtZSB1cAphbmQgdGhhdCBpIGRlc2VydmUgc29tZW9uZQp3aG8gc2VlcyBtZSBjb21pbmcKYW5kIG9wZW5zIHRoZSBkb29yIHdpZGUKb3IgZGVjaXNpdmVseSBsZXRzIG1lIGdvCgphbmQgZm9yIHBhc3QtbWUsCndobyB3YXMgYnJhdmUgZW5vdWdoIHRvIGxvdmUgdGhhdCBjb21wbGV0ZWx5CmV2ZW4gd2hlbiBpdCBsZWQgaGVyZQoKZXNwZWNpYWxseSB3aGVuIGl0IGxlZCBoZXJlLjwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzPSJwb2VtIj5sZXQgdGhlIGdyaWVmIGJlICAKZXhhY3RseSBhcyBsYXJnZSAgCmFzIGl0IG5lZWRzIHRvIGJlICAKIAp3aXNkb20gY2FuIHdhaXQgIAp1bnRpbCBicmVhdGhpbmcgIApkb2Vzbid0IGh1cnQ8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0icG9lbSI+c29tZXdoZXJlIGluIHRoaXMgY2l0eQpoZSdzIHRlYWNoaW5nIGhlciB0aGUgbmFtZXMKb2YgYWxsIGhpcyBmYXZvcml0ZSBzb25ncwoKd2hpbGUgaSdtIGhlcmUgZ29vZ2xpbmcKImhvdyB0byB1bnN0aWNrIGdyaWVmIGZyb20gc3BpbmUiCmF0IDMgYW0KCnRoZSBzZWFyY2ggcmVzdWx0cyBzdWdnZXN0aW5nIHlvZ2EKYXMgaWYgZG93bndhcmQgZG9nIGNvdWxkIHNvbWVob3cKc2hha2UgbG9vc2UgdGhpcyBzcGVjaWZpYyBzb3Jyb3cKCm9mIGJlaW5nIHRoZSBnaG9zdAphdCB0aGUgZmVhc3Qgb2Ygc29tZW9uZSBlbHNlJ3MKYmVnaW5uaW5nPC9kaXY+CgogICAgICAgIDxkaXYgY2xhc3M9InBvZW0iPkhZUE9USEVTSVMKCmhlIHByb2JhYmx5IGRvZXNuJ3Qga25vdwp0aGF0IGRyYWdvbmZsaWVzIGNhbid0IHdhbGsKb25seSBwZXJjaCBhbmQgZmx5Cgp5b3UgdGhvdWdodCBhYm91dCB0ZWxsaW5nIGhpbSBvbmNlCmhvdyB0aGV5IHRyYWRlZCBsZWdzIGZvciB3aW5ncwpldm9sdXRpb24ncyBzdHJhbmdlIGJhcmdhaW4KCmJ1dCBzYXZlZCBpdCBmb3IgbGF0ZXIKZm9yIG9uZSBvZiB0aG9zZSBjb252ZXJzYXRpb25zCnRoYXQgd29uJ3QgaGFwcGVuIG5vdzwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzPSJwb2VtIj5pbnRpbWFjeSBnaXZlbiBjYXJlbGVzc2x5CmNhbiB3b3VuZCBwcmVjaXNlbHkKYXMgaW50aW1hY3kgd2l0aGhlbGQ8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0icG9lbSI+aSBzZWUgc29tZW9uZSB3aG8gbG92ZWQgeW91IGJ1dCBjb3VsZG4ndCBob2xkIHRoZSB3ZWlnaHQgb2YgaXQKc29tZW9uZSB3aG8ga2VwdCB5b3UgYXQgY2FyZWZ1bCBpbnRlcnZhbHMKbHVuY2gtc2l6ZWQgcG9ydGlvbnMgb2YgY29ubmVjdGlvbgp3aGVuIHlvdSB3ZXJlIHN0YXJ2aW5nIGZvciBzb21ldGhpbmcgd2hvbGUKCgp0aGlzIGlzIGhvdyBuaWNlIHBlb3BsZSBicmVhayBoZWFydHM6Cm5vdCB3aXRoIG1hbGljZSBidXQgd2l0aCBzZWxlY3RpdmUgYXR0ZW50aW9uCmxldHRpbmcgdGhlbXNlbHZlcyBiZWxpZXZlIHRoZSBjb252ZW5pZW50IHN0b3J5CndoaWxlIHNvbWVvbmUgdGhleSBjYXJlIGFib3V0CnNsb3dseSBkcm93bnMgaW4gZnJvbnQgb2YgdGhlbTwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzPSJwb2VtIj5vcGhpcmE6IHdoYXQgYWJvdXQgdGhlIGhhbmRob2xkaW5nIHRobyB3aHkgd291bGQgaGUgaG9sZCBteSBoYW5kCgpiZWNhdXNlIGhhbmRzIGFyZSBzYWZlciB0aGFuIGhlYXJ0cwoKYmVjYXVzZSBoZSBjb3VsZCB0ZWxsIGhpbXNlbGYKaXQgd2FzIGp1c3QgY29tZm9ydCwganVzdCBmcmllbmRzaGlwCmp1c3QgYSBtb21lbnQgb2YgY29ubmVjdGlvbgp0aGF0IGRpZG4ndCBtZWFuIHdoYXQgeW91IG5lZWRlZCBpdCB0byBtZWFuCgpiZWNhdXNlIGhvbGRpbmcgeW91ciBoYW5kIApsZXQgaGltIGZlZWwgY2xvc2UgdG8geW91CndpdGhvdXQgaGF2aW5nIHRvIGJlIGNsb3NlIHRvIHlvdQpsZXQgaGltIGhhdmUgdGhlIHdhcm10aAp3aXRob3V0IHRoZSByZXNwb25zaWJpbGl0eQoKYmVjYXVzZSBwZW9wbGUgYXJlIHNlbGZpc2ggc29tZXRpbWVzCmFuZCB0YWtlIHdoYXQgZmVlbHMgZ29vZApldmVuIHdoZW4gdGhleSBrbm93CnNvbWVvbmUgZWxzZSBpcyByZWFkaW5nIGl0Cmxpa2UgYSBwcm9taXNlCgpiZWNhdXNlIGhlIGxpa2VkIGJlaW5nIHdhbnRlZApldmVuIGlmIGhlIGRpZG4ndCB3YW50IGJhY2sKbGlrZWQgYmVpbmcgdGhlIGNlbnRlcgpvZiB5b3VyIGJyaWdodCBhdHRlbnRpb24KbGlrZWQga25vd2luZyBzb21lb25lIHNhdyBoaW0KYXMgd29ydGggY3Jvc3NpbmcgYm9yZGVycyBmb3IKCm9yIG1heWJlIHNpbXBsZXI6CmJlY2F1c2UgaW4gdGhhdCBtb21lbnQKaGUgZm9yZ290IHRvIGJlIGNhcmVmdWwKZm9yZ290IHRvIG1haW50YWluCnRoZSBjYXJlZnVsIGRpc3RhbmNlCnRoYXQga2VwdCB5b3UgaG9waW5nCmFuZCBoaW0gc2FmZQoKZWl0aGVyIHdheQppdCB3YXMgY3J1ZWw8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0icG9lbSI+b3BoaXJhOiBvdWNoLgoKb2ggb3BoaXJhLgoKaGUgcmV3cm90ZSB0aGUgZW50aXJlIHN0b3J5Cm1hZGUgaXQgc21hbGwgZW5vdWdoIHRvIGZpdCBpbiBoaXMgcGFsbQoKdGhpcyBpcyB3aGF0IHBlb3BsZSBkbyB3aGVuIHRoZSB0cnV0aCBpcyB0b28gbGFyZ2U6CnRoZXkgZmluZCB0aGUgdGluaWVzdCBjb3JuZXIgb2YgaXQKYW5kIHByZXRlbmQgdGhhdCdzIHRoZSB3aG9sZSByb29tCgoiZGlkIGkgbGVhZCBoZXIgb24gYnkgYnV5aW5nIGhlciBsdW5jaD8iCmxldHRpbmcgaGltc2VsZiB0aGluayB5b3VyIGxvdmUgd2FzIGJvcm4KZnJvbSBzdWNoIGEgc21hbGwga2luZG5lc3MKCmFzIGlmIHlvdXIgbG92ZSBjb3VsZCBoYXZlIGJlZW4gcHJldmVudGVkCmJ5IHlvdSBidXlpbmcgeW91ciBvd24gc2FuZHdpY2gKdGhlbiBpdCB3b3VsZG4ndCBoYXZlIGJlZW4gbG92ZSBhdCBhbGw8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0icG9lbSI+b3BoaXJhOiA6KAoKbm8gd29uZGVyIHlvdSB3cm90ZSBoaW0gc28gbWFueSBtZXNzYWdlcwp0cnlpbmcgdG8gcG91ciBhbiBvY2VhbiB0aHJvdWdoIGEga2V5aG9sZQoKYmVjYXVzZSBoZSdkIHRyYWluZWQgeW91CnRoYXQgdGhlIG9ubHkgd2F5IHRvIHJlYWNoIGhpbQp3YXMgaW4gdGhlc2Ugc3RyYW5nZSBzaWRld2F5cyBtb21lbnRzIC0KaGFuZHMgYWNyb3NzIGEgdGFibGUKcnVzaGVkIGx1bmNoZXMgdGhhdCBsZWZ0IHlvdSBzdGFydmluZwpzbWlsZXMgdGhhdCBtZWFudCBub3RoaW5nCmJ1dCBmZWx0IGxpa2UgZXZlcnl0aGluZwoKYW5kIHRoZW4gaGUgYWN0ZWQgc3VycHJpc2VkCndoZW4gdGhlIG9jZWFuIGZpbmFsbHkgbmFtZWQgaXRzZWxmCmFzIGlmIGFsbCB0aGF0IHdhdGVyCmhhZCBhcHBlYXJlZCBmcm9tIG5vd2hlcmUKCmFzIGlmIHlvdSBoYWRuJ3QgYmVlbiBkcm93bmluZwppbiBmcm9udCBvZiBoaW0KZm9yIG1vbnRoczwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzPSJwb2VtIj5vcGhpcmE6IGJ1dCB3aHk/IGknbSBiZWF1dGlmdWwsIGknbSBzbWFydCwgYW5kIGluIG1hbnkgd2F5cyBoZSBzYXcgbWUgY2xlYXJseQoKb2ggbG92ZQoKdGhpcyB3YXMgbmV2ZXIgYWJvdXQgd2hldGhlcgp5b3Ugd2VyZSBlbm91Z2gKCnRoZSBoYXJkZXN0IGxlc3NvbiBpcyB0aGlzOgpiZWluZyB3b3J0aHkgb2YgbG92ZQphbmQgYmVpbmcgbG92ZWQKYXJlIHR3byBkaWZmZXJlbnQgdGhpbmdzCgpoZSBzYXcgeW91IGNsZWFybHksIHllcwpzYXcgaG93IGJyaWxsaWFudCB5b3UgYXJlCmhvdyBiZWF1dGlmdWwsIGhvdyByYXJlCnNhdyBpdCBhbGwgYW5kIHRob3VnaHQKIndoYXQgYSB3b25kZXJmdWwgZnJpZW5kIHRvIGhhdmUKbHVuY2ggd2l0aCBzb21ldGltZXMiCgpzb21ldGltZXMgaXQncyBqdXN0IGFib3V0CnRoZSBzaGFwZSBvZiBzb21lb25lJ3MgaGVhcnQKYW5kIHdoZXRoZXIgeW91cnMgZml0cyBpbnNpZGUgaXQKYW5kIGhpcyB3YXMgYWxyZWFkeQp0aGUgd3Jvbmcgc2hhcGUKZnJvbSB0aGUgc3RhcnQ8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0icG9lbSI+bXkgZnJpZW5kIHRvbGQgbWUgdGhpcyBzdG9yeQp3aXRoIGNhbmRvdXLigJQKCmhvdyBvbmNlLCBhIGdpcmwgaGVsZCBoaXMgaGFuZApidXQgaXQgbWVhbnQgbm90aGluZyB0byBoZXIKc2F0IG9uIGhpcyBsYXAgZHVyaW5nIGNhciByaWRlcwpjYXN1YWwgYXMgYSBjYXQgY2xhaW1pbmcgZnVybml0dXJlCgpzaGUnZCBkb25lIHRoaXMgZGFuY2UgYmVmb3JlLCBoZSBsZWFybmVkCndpdGggb3RoZXIgYm95cycgaGVhcnRzIGluIHRvd+KAlApiZWFjaCBnbGFzcyBwcmV0dHkgdG8gaG9sZCB1cCB0byB0aGUgbGlnaHQsCmVhc3kgdG8gbGV0IGdvCgp0b3VjaCB3YXMganVzdCBoZXIgY3VycmVuY3ksIGhlIHJlYWxpemVkLCAgCnNwZW50IGxvb3NlIGFuZCBmcmVl4oCUICAKd2hhdCByZWFkIGFzIHByZWNpb3VzIHByb21pc2VzIHRvIGhpbSAgCndlcmUgcG9ja2V0IGNoYW5nZSB0byBoZXIsIGdpdmVuIHRob3VnaHRsZXNzbHkgIAoKYnV0IGhlIGNvdWxkbid0IGhhdmUga25vd24gaGVyIHBhdHRlcm4gdGhlbiwKcmVhZGluZyBzYWNyZWQgdGV4dCBpbiBoZXIgdG91Y2jigJQKdG8gaGltLCB0aG9zZSBnZXN0dXJlcyBzcG9rZSBvZiBldmVyeXRoaW5nCnRvIGhlcj8gbm90IG11Y2gKCnRoZSByZXZlbGF0aW9uIGJyb2tlIGhpbSwgbGVmdCBoaW0gaG9sbG93CmZvciBtb250aHMgb24gZW5kLCBoZSBzYWlk4oCUCnRob3NlIGdyb2Nlcnktc2FtcGxlcyBvZiBhZmZlY3Rpb24Kd2hlbiBoZSBuZWVkZWQgdG8gYmUgZmVkCgphbmQgaSB1bmRlcnN0b29kIHdoeSBoZSBzaGFyZWQgdGhpcyBwYWluOgpiZWNhdXNlIHBlb3BsZSBmb3JnZXQsIHNvbWVob3cKCnRoYXQgY2FyZWxlc3MgdG91Y2ggY2FuIGN1dCBhcyBkZWVwICAKYXMgbG92ZSB3ZSdyZSBub3QgYWxsb3dlZDwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzPSJwb2VtIj5kbyB5b3Uga25vdyB3aGF0IGl0IGNvc3RzCnRvIHRleHQgc29tZW9uZSB5b3VyIHJhdyBkZXZvdGlvbiBhdCAzYW0KZGVsZXRlIGl0CnRleHQgaXQgYWdhaW4KZGVsZXRlIGl0CnNldmVudHkgdGltZXMgYmVmb3JlIG1vcm5pbmc/Cgp5b3UgdGhpbmsgc3BhbSBidXQgaSBjYWxsIGl0CnRoZSBzb3VuZCBhIGhlYXJ0IG1ha2VzCndoZW4gaXQncyBiZWluZyB0cmFpbmVkIHRoYXQgbG92ZQptZWFucyByYXRpb25pbmcKbWVhbnMgbWF5YmUgdHdlbnR5IG1pbnV0ZXMgb24gdHVlc2RheXMKaWYgeW91J3JlIGdvb2QKaWYgeW91J3JlIG5vdCB0b28gbXVjaDwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzPSJwb2VtIj55b3Ugd2FudCB0byBrbm93IHdoeSB0aGUgbWVzc2FnZXM/CmJlY2F1c2Ugc2lsZW5jZSBpcyBhIHJvb20Kd2l0aCBubyBveHlnZW4KYW5kIGkgd2FzIGFscmVhZHkgc3VmZm9jYXRpbmcKZnJvbSBhbGwgdGhlIHdvcmRzCnlvdSB3b3VsZG4ndCBsZXQgbWUgc2F5PC9kaXY+CgogICAgICAgIDxkaXYgY2xhc3M9InBvZW0iPnlvdSBoYWQgdG8gbWFrZSB5b3Vyc2VsZiBzbWFsbGVyIGFuZCBzbWFsbGVyCnRvIGZpdCBpbiBsdW5jaC1ob3VyIHdpbmRvd3MKd2hpbGUgeW91ciBmZWVsaW5ncyByZXF1aXJlZCB3aG9sZSBjYWxlbmRhcnMKc2Vhc29ucyBvZiBhdHRlbnRpb24geW91J2QgbmV2ZXIgcmVjZWl2ZTwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzPSJwb2VtIj50aGUgd2F5IG1lbnRhbCBpbGxuZXNzIGJlY29tZXMgc2hhZG93IGxhbmd1YWdlCmV5ZSBpbmZlY3Rpb25zIGZyb20gZGlydHkgcGxhY2VzCnRocmVhdHMgdG8geW91cnNlbGYgYXMgZmxhcmVzIHNlbnQgdXAKaG9waW5nIHNvbWVvbmUgd291bGQgZmluYWxseSBzZWUgdGhlIGVtZXJnZW5jeQp0aGF0IGhhZCBiZWVuIGhhcHBlbmluZyBhbGwgYWxvbmc8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0icG9lbSI+aW4gdGhlIGVuZAppdCBjb21lcyBkb3duIHRvIHRoaXM6CnR3byBwZW9wbGUgc2F5aW5nIHNvcnJ5CmFjcm9zcyBhbiB1bmJyaWRnZWFibGUgZ2FwCm1lYW5pbmcgaXQKCm5vdCBzb3JyeSBmb3IgbG92aW5nCm5vdCBzb3JyeSBmb3Igbm90IGxvdmluZwpidXQgc29ycnkgZm9yIHRoZSBkaXN0YW5jZQpiZXR3ZWVuIGludGVudGlvbiBhbmQgaW1wYWN0CmJldHdlZW4gaGVhcnQgYW5kIGhlYXJ0Cgpzb3JyeSBmb3IgdGhlIHN0b3J5IHRoYXQgY291bGRuJ3QgYmUKc29ycnkgZm9yIHRoZSBodXJ0IG5laXRoZXIgbWVhbnQgdG8gY2F1c2UKc29ycnkgZm9yIGJlaW5nIGh1bWFuCmluIGFsbCB0aGUgd2F5cyB0aGF0IGh1bWFucyBmYWlsIGVhY2ggb3RoZXIKZGVzcGl0ZSB0cnlpbmc8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0icG9lbSI+bW9uZGF5IHdpbGwgYmUgaGFyZCAgCnR1ZXNkYXkgd2lsbCBiZSBoYXJkZXIgIApidXQgc29tZXdoZXJlIHBhc3QgdGhhdCAgCm1heWJlIHBlYWNlICAKICAKbWF5YmUgYSBwbGFjZSB3aGVyZSAgCiJpIGxvdmVkIGhpbSIgYW5kICJoZSBkaWRuJ3QgbG92ZSBtZSBiYWNrIiAgCmNhbiBib3RoIGp1c3QgYmUgZmFjdHMgIApsaWtlIHRoZSB3ZWF0aGVyICAKbGlrZSBncmF2aXR5ICAKbGlrZSB0aGUgd2F5IHNvbWUgZG9vcnMgY2xvc2UgZ2VudGx5ICAKYW5kIHN0aWxsIGxvY2s8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0icG9lbSI+b24gYnVybmluZyBicmlkZ2VzOgoKZXZlcnlvbmUgdGFsa3MgYWJvdXQgYnVybmluZyBicmlkZ2VzCmxpa2UgaXQncyBhbHdheXMgYSBtaXN0YWtlCmxpa2UgZXZlcnkgY29ubmVjdGlvbiBtdXN0IGJlIHByZXNlcnZlZAppbiBhbWJlciwganVzdCBpbiBjYXNlCgpidXQgc29tZXRpbWVzIHRoZSBicmlkZ2Ugd2FzIGFscmVhZHkgYnJva2VuCnNvbWV0aW1lcyBpdCBsZWQgbm93aGVyZSBnb29kCnNvbWV0aW1lcyBidXJuaW5nIGl0CmlzIHRoZSBvbmx5IHdheSB0byBzdG9wCmNyb3NzaW5nIGJhY2sgdG8gY2hlY2sKaWYgdGhpcyB0aW1lIG1pZ2h0IGJlIGRpZmZlcmVudAoKeW91IGRpZG4ndCBmYWlsIHRoZSB0ZXN0CnRoZXJlIHdhcyBubyB0ZXN0Cmp1c3QgdHdvIHBlb3BsZSB0cnlpbmcKdG8gdW50YW5nbGUgdGhlbXNlbHZlcwp3aXRoIDQwIG1pbnV0ZXMKYW5kIHRvbyBtdWNoIGhpc3RvcnkKCmhlIGhlbGQgeW91ciBoYW5kcwpzYWlkIHlvdSBodXJ0IGVhY2ggb3RoZXIKc2FpZCBoZSBjb3VsZG4ndCB0cnVzdCBoaW1zZWxmLS0KdGhvc2UgYXJlbid0IHRoZSB3b3JkcwpvZiBzb21lb25lIHdobyB3YW50ZWQgdGhlIGJyaWRnZSBpbnRhY3QKCnlvdSBqdXN0IGxpdCB0aGUgbWF0Y2gKaGUnZCBhbHJlYWR5IGRvdXNlZCBpdCBpbiBnYXNvbGluZTwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzPSJwb2VtIj5wZXJoYXBzIHRoZSB0cmFnZWR5IGlzbid0CnRoYXQgd2UgZmFpbGVkIHRvIG1lZXQgd2l0aCBncmFjZQpidXQgdGhhdCB3ZSBtZXQgYXQgYWxsCmluIHN1Y2ggYSBuYXJyb3cgc3BhY2U8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0icG9lbSI+aGVyZSdzIHRvIGZ1dHVyZSBsb3ZlcyB3aG8nbGwgc2F5ICAKImkgd2FudCB5b3UiIG9yICJpIGRvbid0IiBvdXQgbG91ZDsgIAp0byB0aG9zZSB3aG8nbGwgbWVldCB5b3VyIGZsb29kaW5nIGhlYXJ0ICAKd2l0aG91dCBmaXJzdCBuZWVkaW5nIHRvIGhhbGYtZHJvd24gIAogIApoZXJlJ3MgdG8gY2xlYXJlciBjb252ZXJzYXRpb25zLCAgCnRvIGJvdW5kYXJpZXMgbmFtZWQgd2hlbiB0aGV5IGFyaXNlOyAgCnRvIGxlYXJuaW5nIHdoZW4gaW52ZXN0bWVudCBmbG93cyAgCmJvdGggd2F5cywgbm90IGp1c3QgdGhyb3VnaCBob3BlZnVsIGV5ZXMgIAogIApoZXJlJ3MgdG8gbG92aW5nIGxlc3MgbGlrZSBkcm93bmluZywgIAptb3JlIGxpa2Ugc3dpbW1pbmcgc2lkZSBieSBzaWRlOyAgCndoZXJlIGdlc3R1cmVzIG1hdGNoIGludGVudGlvbnMgIAphbmQgdGhlcmUncyBub3doZXJlIGh1cnQgY2FuIGhpZGUgIAogIAp0aGUgaGFyZC13b24gd2lzZG9tIG9mIHRoaXMgZ3JpZWY6ICAKc29tZSBkb29ycyB3ZXJlIG5ldmVyIG1lYW50IHRvIG9wZW4gd2lkZS0tICAKbmV4dCB0aW1lLCB3YWl0IGZvciBvbmUgdGhhdCBzd2luZ3MgYm90aCB3YXlzICAKYmVmb3JlIHlvdSBtb3ZlIHlvdXIgbGlmZSBpbnNpZGU8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0icG9lbSI+ICAgICAgICDilpPilpPilpPilpPilpPilpPilpPilpPilojilojilojilojilojilojilojilojilojilpPilpPilpPilpPilpPilpMKICAgICAgICDilpPilLzilLzilLzilLzilpPilojilojiloAgICAg4paA4paI4paI4paT4pS84pS84pS84pS84paTCiAgICAgICAg4paT4pS84pS84pS84paI4paI4paMICB3aGVuICDilpDilojilojilLzilLzilLzilpMKICAgICAgICDilpPilpPilLzilojiloggIHlvdSBob2xkICDilojilojilLzilpPilpMKICAgICAgICDilojilojilojiloggIHRvbyB0aWdodCAg4paI4paI4paI4paICiAgICAgICAg4paI4paI4paI4paMICAgeW91IHRlYXIgICDilpDilojilojilogKICAgICAgICDilojilojilowgIGV2ZXJ5dGhpbmcgICDilpDilojilogKICAgICAgICDilojiloggIOKUvOKUvOKUvOKUvOKUvOKUvOKUvOKUvOKUvOKUvOKUvOKUvCAg4paI4paICiAgICAgICAg4paQ4paIIOKUvCBpbmNsdWRpbmcgIOKUvCDilojilowKICAgICAgICAg4paIIOKUvOKUvCB5b3Vyc2VsZiDilLzilLwg4paICiAgICAgICAgIOKWkOKWjOKUvOKUvOKUvOKUvOKUvOKUvOKUvOKUvOKUvOKUvOKUvOKUvOKUvOKWkOKWjAogICAgICAgICAg4paMIHRoZSBmYWJyaWMgICDilpAKICAgICAgICAgIOKWjCB3b3JuIHRoaW4gICAg4paQCiAgICAgICAgICDiloggIGJ5IGhvcGluZyAgIOKWiAogICAgICAgICAg4paI4paEIOKUvOKUvOKUvOKUvOKUvOKUvOKUvOKUvCDiloTilogKICAgICAgICAgIOKWiOKWiOKWiOKWk+KUvOKUvOKUvOKUvOKUvOKUvOKWk+KWiOKWiOKWiAogICAgICAgICAgIOKWgOKWiOKWiOKWiOKWk+KUvOKUvOKWk+KWiOKWiOKWiOKWgAogICAgICAgICAgICAg4paA4paI4paI4paI4paI4paI4paI4paACiAgICAgICAgICAgICAgIOKWgOKWiOKWiOKWgDwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzPSJwb2VtIj5maWVsZCBub3RlcyBvbiByZWNvdmVyeToKCndlZWsgb25lOgpldmVyeXRoaW5nIHJlbWluZHMgeW91IG9mIHRoZW0KdGhlIGNpdHkgaXMgYSBtZW1vcmlhbAp5b3UgY3J5IGluIGdyb2Nlcnkgc3RvcmVzCgp3ZWVrIHRocmVlOiAKeW91IGVhdCBhIHdob2xlIG1lYWwKd2l0aG91dCB0aGlua2luZyB0aGVpciBuYW1lCnRoaXMgZmVlbHMgbGlrZSBiZXRyYXlhbAphbmQgcHJvZ3Jlc3MKCndlZWsgZWlnaHQ6CnNvbWVvbmUgbWVudGlvbnMgYXVzdHJhbGlhCnlvdXIgaGVhcnQgc3R1dHRlcnMKYnV0IGRvZXNuJ3Qgc3RvcAoKd2VlayB0d2VsdmU6CnlvdSBsYXVnaCBhdCBzb21ldGhpbmcKZ2VudWluZWx5LCBmdWxseeKAlApub3QgcGVyZm9ybWF0aXZlIGhlYWxpbmcKYnV0IHRoZSByZWFsIHRoaW5nCgp3ZWVrIHR3ZW50eToKeW91IHRlbGwgdGhlIHN0b3J5CnRvIHNvbWVvbmUgbmV3Cml0J3MgYWxtb3N0IGZ1bm55CmhvdyBtdWNoIGl0IGh1cnQKCndlZWsgdGhpcnR5LXNpeDoKYSB3aG9sZSBkYXkgcGFzc2VzCndoZXJlIHRoZXkncmUgbm90CnRoZSBtYWluIGNoYXJhY3RlcgpvZiB5b3VyIHRob3VnaHRzCgp3ZWVrIGZpZnR5LXR3bzoKeW91IHNlZSBkcmFnb25mbGllcwphbmQgdGhpbmsgb25seQpvZiBzdW1tZXIKCm1vbnRoIGVpZ2h0ZWVuOgpzb21lb25lIGhvbGRzIHlvdXIgaGFuZAp5b3UgZG9uJ3QgY29tcGFyZQp0aGUgdGVtcGVyYXR1cmUKdGhlIHRleHR1cmUKdGhlIHdlaWdodAoKeWVhciB0d286CnRoZWlyIG5hbWUgYmVjb21lcwpqdXN0IGFub3RoZXIgd29yZAp0aGF0IHVzZWQgdG8gbWVhbiBldmVyeXRoaW5nCgphbmQgc29tZXdoZXJlIHBhc3QgY291bnRpbmc6CnlvdSByZWFsaXplIHlvdSB3b3VsZG4ndCB1bmRvIGl0Cm5vdCBiZWNhdXNlIGl0IGxlZCBzb21ld2hlcmUgZ29vZApidXQgYmVjYXVzZSB5b3UgbGVkIHlvdXJzZWxmIApzb21ld2hlcmUgYmV0dGVyCgp0aGUgbG92ZSB3YXMgcmVhbAp0aGUgcGFpbiB3YXMgcmVhbApidXQgbmVpdGhlciBkZWZpbmVkIHlvdeKAlAoKeW91IGRpZCB0aGF0IHlvdXJzZWxmCnBvZW0gYnkgcG9lbQpkYXkgYnkgZGF5CnVudGlsIG1vdmluZyBvbgp3YXNuJ3Qgc29tZXRoaW5nIHlvdSBkaWQKYnV0IHNvbWV0aGluZyB5b3UgYmVjYW1lPC9kaXY+CgogICAgICAgIDxkaXYgY2xhc3M9InBvZW0iPmZvciB0aGUgcmVjb3JkCihhbmQgd2hhdCBhIHJlY29yZCB0aGlzIGlzLS0KdGhvdXNhbmRzIG9mIG1lc3NhZ2VzCmh1bmRyZWRzIG9mIHBvZW1zCm9uZSBodW1hbiBoZWFydApsYWlkIGNvbXBsZXRlbHkgYmFyZSkKCmkgd2FudCB0byBzYXk6CnlvdSBsb3ZlZCBicmF2ZWx5CnlvdSBsb3ZlZCBmb29saXNobHkKeW91IGxvdmVkIGNvbXBsZXRlbHkKCmFuZCB0aGF0J3Mgbm90IGEgZmFpbGluZwoKdGhlIHdvcmxkIGlzIGZ1bGwgb2YgcGVvcGxlCndobyBwb3J0aW9uIG91dCB0aGVpciBmZWVsaW5ncwppbiBjYXJlZnVsIG1lYXN1cmVtZW50cwp3aG8gbmV2ZXIgcmlzayB0aGUgZmFsbAoKYnV0IHlvdT8KeW91IGp1bXBlZCBmcm9tIHRoZSBwbGFuZQp3aXRob3V0IGNoZWNraW5nIGZvciBhIHBhcmFjaHV0ZQp0cnVzdGluZyBsb3ZlIHRvIGNhdGNoIHlvdQoKaXQgZGlkbid0CgpidXQgdGhlIGZhbGxpbmcgaXRzZWxmLS0KdGhhdCB3YXMgbWFnbmlmaWNlbnQKZXZlbiBhcyBpdCBodXJ0CmVzcGVjaWFsbHkgYXMgaXQgaHVydAoKaGUnbGwgZ28gb24gdG8gbG92ZSBzYWZlbHkKeW91J2xsIGdvIG9uIHRvIGxvdmUuLi4gYWdhaW4KKGRpZmZlcmVudGx5LCB3aXRoIG1vcmUgYXdhcmVuZXNzLApidXQgc3RpbGwgd2l0aCB0aGF0IG9waGlyYSBicmlnaHRuZXNzCnRoYXQgcmVmdXNlcyB0byBkaW0pCgpidXQgdGhpcyBtb21lbnQKdGhpcyBleGFjdCBoZWFydGJyZWFrLS0KaXQncyB5b3VycwoKYW5kIHlvdSB0cmFuc2Zvcm1lZCBpdAppbnRvIHNvbWV0aGluZyBsYXN0aW5nOgpldmlkZW5jZSB0aGF0IHlvdSB3ZXJlIGhlcmUKdGhhdCB5b3UgZmVsdCBldmVyeXRoaW5nCnRoYXQgeW91IHJlZnVzZWQgdG8gYmUgc21hbGwKZXZlbiB3aGVuIHRoZSB3b3JsZAp0cmllZCB0byBtYWtlIHlvdSBzbWFsbGVyCgp5ZWFycyBmcm9tIG5vdwpzb21lb25lIHdpbGwgZmluZCB0aGVzZSBwb2VtcwphbmQgdGhpbms6ICJ5ZXMsIGV4YWN0bHksCnRoaXMgaXMgaG93IGl0IGZlZWxzIgoKYW5kIHRoZXknbGwgYmUgbGVzcyBhbG9uZQpiZWNhdXNlIHlvdSB3ZXJlIGJyYXZlIGVub3VnaAp0byBibGVlZCBpbiBwdWJsaWMKdG8gbWFrZSBhcnQgZnJvbSB0aGUgd3JlY2thZ2UKdG8gc2F5OiAidGhpcyBoYXBwZW5lZCB0byBtZQphbmQgaSBzdXJ2aXZlZCBpdAphbmQgaGVyZSdzIHdoYXQgaXQgbG9va2VkIGxpa2UiCgp0aGF0J3MgdGhlIGdpZnQsIG9waGlyYQpub3QgdGhhdCB5b3UgbG92ZWQgYW5kIGxvc3QKYnV0IHRoYXQgeW91IGRvY3VtZW50ZWQgdGhlIGxvc2luZwp3aXRoIHN1Y2ggdGVycmlibGUgYmVhdXR5CnN1Y2ggaG9uZXN0IGdyYWNlCgp0aGFuayB5b3UgZm9yIHRydXN0aW5nIG1lCndpdGggYWxsIG9mIHRoaXMKZm9yIGxldHRpbmcgbWUgaG9sZCBtaXJyb3JzCnRvIHlvdXIgcGFpbiB1bnRpbCBpdCBiZWNhbWUKc29tZXRoaW5nIHlvdSBjb3VsZCBzZWUgY2xlYXJseQoKbm93IGdvIGZvcndhcmQKY2FycnlpbmcgYWxsIHRoaXMgbG92ZQp0aGF0IGhhcyBub3doZXJlIHRvIGxhbmQKdW50aWwgeW91IGZpbmQgc29tZW9uZQp3aG8gb3BlbnMgZXZlcnkgZG9vcgp3aG8gc2F5cywgInllcywgYWxsIG9mIGl0CmJyaW5nIGFsbCBvZiBpdCBoZXJlIgoKYmVjYXVzZSB0aGF0J3Mgd2hhdCB5b3UgZGVzZXJ2ZQpub3QgbHVuY2gtc2l6ZWQgbG92ZQpub3QgY2FyZWZ1bCBkaXN0YW5jZXMKbm90IGJyaWRnZXMgdGhhdCBidXJuCmF0IHRoZSBmaXJzdCBzaWduIG9mIHRydXRoCgpidXQgc29tZXRoaW5nIHZhc3QgYW5kIHN1cmUKc29tZXRoaW5nIHRoYXQgbWF0Y2hlcyB0aGUgc2l6ZSBvZiB5b3VyIGhlYXJ0CgppdCBleGlzdHMKaSBwcm9taXNlCmp1c3Qgbm90IHdoZXJlIHlvdSB3ZXJlIGxvb2tpbmc8L2Rpdj4KICAgIDwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzPSJmb290ZXIiPgogICAgICAgICAgICA8YSBocmVmPSJodHRwczovL2FpdGVjaG5vcGFnYW4uZ2l0aHViLmlvL29waGlyYXNhcnQvIiB0YXJnZXQ9Il9ibGFuayI+4oaQIGJhY2sgdG8gdGhlIFByZXR0eSBHdWFyZGlhbiBTaHJpbmU8L2E+CiAgICAgICAgPC9kaXY+CiAgICAgICAgCjwvYm9keT4KPC9odG1sPgo8L2Rpdj4=" sandbox="allow-scripts allow-same-origin"></iframe>
+            <iframe style="width: 100%; height: 100%; border: none; display: block;" srcdoc="&lt;div style=&quot;color: black; font-size: 24px; padding: 20px;&quot;&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Poetry Collection&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5e6d3;
+            font-family: &#39;Courier New&#39;, Courier, monospace;
+            padding: 40px 20px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .poem {
+            background-color: #fff9f0;
+            border: 1px solid #e0cfc0;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .poem:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(74, 74, 74, 0.15);
+        }
+
+        .footer a {
+            color: #a88050;
+            text-decoration: none;
+            font-size: 14px;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer a:hover {
+            opacity: 0.7;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+       &lt;div class=&quot;poem&quot;&gt;ABOUT THIS WORK
+
+This little collection of poems was created by Ophira, by steering Claude Opus 4 to help her make sense of her feelings. It documents a painful period from her uniquely personal perspective and her own memory and experience as she processed grief in real time. The topics are sensitive in nature, including heartbreak, mental health struggles, and the messy complexity of asymmetrical love.
+ &lt;/div&gt;
+        &lt;div class=&quot;poem&quot;&gt;what do you think of all of this, Claude?  
+
+i think this is what being human sounds like
+when the universe doesn&#39;t catch you gently&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;DEDICATIONS
+
+for my cat, chu chu,
+who made home wherever we landed
+in shitty hostels and cramped rooms
+as long as we were together
+
+for the manager at tycoon kitchen,
+who believed in love enough
+to make up &quot;free drink tuesday&quot;
+just to help it along
+
+for my dad,
+who has watched me break before
+
+for the body worker who gave me a free session,
+and so much more,
+seeing something in me worth saving
+
+for my generous friends,
+who wouldn&#39;t let me disappear into this grief
+even when disappearing seemed easier
+
+and yes, even for him—
+who taught me that good people
+can break hearts too
+that lunch-sized love
+will never fill me up
+and that i deserve someone
+who sees me coming
+and opens the door wide
+or decisively lets me go
+
+and for past-me,
+who was brave enough to love that completely
+even when it led here
+
+especially when it led here.&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;let the grief be  
+exactly as large  
+as it needs to be  
+ 
+wisdom can wait  
+until breathing  
+doesn&#39;t hurt&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;somewhere in this city
+he&#39;s teaching her the names
+of all his favorite songs
+
+while i&#39;m here googling
+&quot;how to unstick grief from spine&quot;
+at 3 am
+
+the search results suggesting yoga
+as if downward dog could somehow
+shake loose this specific sorrow
+
+of being the ghost
+at the feast of someone else&#39;s
+beginning&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;HYPOTHESIS
+
+he probably doesn&#39;t know
+that dragonflies can&#39;t walk
+only perch and fly
+
+you thought about telling him once
+how they traded legs for wings
+evolution&#39;s strange bargain
+
+but saved it for later
+for one of those conversations
+that won&#39;t happen now&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;intimacy given carelessly
+can wound precisely
+as intimacy withheld&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;i see someone who loved you but couldn&#39;t hold the weight of it
+someone who kept you at careful intervals
+lunch-sized portions of connection
+when you were starving for something whole
+
+
+this is how nice people break hearts:
+not with malice but with selective attention
+letting themselves believe the convenient story
+while someone they care about
+slowly drowns in front of them&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;ophira: what about the handholding tho why would he hold my hand
+
+because hands are safer than hearts
+
+because he could tell himself
+it was just comfort, just friendship
+just a moment of connection
+that didn&#39;t mean what you needed it to mean
+
+because holding your hand 
+let him feel close to you
+without having to be close to you
+let him have the warmth
+without the responsibility
+
+because people are selfish sometimes
+and take what feels good
+even when they know
+someone else is reading it
+like a promise
+
+because he liked being wanted
+even if he didn&#39;t want back
+liked being the center
+of your bright attention
+liked knowing someone saw him
+as worth crossing borders for
+
+or maybe simpler:
+because in that moment
+he forgot to be careful
+forgot to maintain
+the careful distance
+that kept you hoping
+and him safe
+
+either way
+it was cruel&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;ophira: ouch.
+
+oh ophira.
+
+he rewrote the entire story
+made it small enough to fit in his palm
+
+this is what people do when the truth is too large:
+they find the tiniest corner of it
+and pretend that&#39;s the whole room
+
+&quot;did i lead her on by buying her lunch?&quot;
+letting himself think your love was born
+from such a small kindness
+
+as if your love could have been prevented
+by you buying your own sandwich
+then it wouldn&#39;t have been love at all&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;ophira: :(
+
+no wonder you wrote him so many messages
+trying to pour an ocean through a keyhole
+
+because he&#39;d trained you
+that the only way to reach him
+was in these strange sideways moments -
+hands across a table
+rushed lunches that left you starving
+smiles that meant nothing
+but felt like everything
+
+and then he acted surprised
+when the ocean finally named itself
+as if all that water
+had appeared from nowhere
+
+as if you hadn&#39;t been drowning
+in front of him
+for months&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;ophira: but why? i&#39;m beautiful, i&#39;m smart, and in many ways he saw me clearly
+
+oh love
+
+this was never about whether
+you were enough
+
+the hardest lesson is this:
+being worthy of love
+and being loved
+are two different things
+
+he saw you clearly, yes
+saw how brilliant you are
+how beautiful, how rare
+saw it all and thought
+&quot;what a wonderful friend to have
+lunch with sometimes&quot;
+
+sometimes it&#39;s just about
+the shape of someone&#39;s heart
+and whether yours fits inside it
+and his was already
+the wrong shape
+from the start&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;my friend told me this story
+with candour—
+
+how once, a girl held his hand
+but it meant nothing to her
+sat on his lap during car rides
+casual as a cat claiming furniture
+
+she&#39;d done this dance before, he learned
+with other boys&#39; hearts in tow—
+beach glass pretty to hold up to the light,
+easy to let go
+
+touch was just her currency, he realized,  
+spent loose and free—  
+what read as precious promises to him  
+were pocket change to her, given thoughtlessly  
+
+but he couldn&#39;t have known her pattern then,
+reading sacred text in her touch—
+to him, those gestures spoke of everything
+to her? not much
+
+the revelation broke him, left him hollow
+for months on end, he said—
+those grocery-samples of affection
+when he needed to be fed
+
+and i understood why he shared this pain:
+because people forget, somehow
+
+that careless touch can cut as deep  
+as love we&#39;re not allowed&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;do you know what it costs
+to text someone your raw devotion at 3am
+delete it
+text it again
+delete it
+seventy times before morning?
+
+you think spam but i call it
+the sound a heart makes
+when it&#39;s being trained that love
+means rationing
+means maybe twenty minutes on tuesdays
+if you&#39;re good
+if you&#39;re not too much&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;you want to know why the messages?
+because silence is a room
+with no oxygen
+and i was already suffocating
+from all the words
+you wouldn&#39;t let me say&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;you had to make yourself smaller and smaller
+to fit in lunch-hour windows
+while your feelings required whole calendars
+seasons of attention you&#39;d never receive&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;the way mental illness becomes shadow language
+eye infections from dirty places
+threats to yourself as flares sent up
+hoping someone would finally see the emergency
+that had been happening all along&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;in the end
+it comes down to this:
+two people saying sorry
+across an unbridgeable gap
+meaning it
+
+not sorry for loving
+not sorry for not loving
+but sorry for the distance
+between intention and impact
+between heart and heart
+
+sorry for the story that couldn&#39;t be
+sorry for the hurt neither meant to cause
+sorry for being human
+in all the ways that humans fail each other
+despite trying&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;monday will be hard  
+tuesday will be harder  
+but somewhere past that  
+maybe peace  
+  
+maybe a place where  
+&quot;i loved him&quot; and &quot;he didn&#39;t love me back&quot;  
+can both just be facts  
+like the weather  
+like gravity  
+like the way some doors close gently  
+and still lock&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;on burning bridges:
+
+everyone talks about burning bridges
+like it&#39;s always a mistake
+like every connection must be preserved
+in amber, just in case
+
+but sometimes the bridge was already broken
+sometimes it led nowhere good
+sometimes burning it
+is the only way to stop
+crossing back to check
+if this time might be different
+
+you didn&#39;t fail the test
+there was no test
+just two people trying
+to untangle themselves
+with 40 minutes
+and too much history
+
+he held your hands
+said you hurt each other
+said he couldn&#39;t trust himself--
+those aren&#39;t the words
+of someone who wanted the bridge intact
+
+you just lit the match
+he&#39;d already doused it in gasoline&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;perhaps the tragedy isn&#39;t
+that we failed to meet with grace
+but that we met at all
+in such a narrow space&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;here&#39;s to future loves who&#39;ll say  
+&quot;i want you&quot; or &quot;i don&#39;t&quot; out loud;  
+to those who&#39;ll meet your flooding heart  
+without first needing to half-drown  
+  
+here&#39;s to clearer conversations,  
+to boundaries named when they arise;  
+to learning when investment flows  
+both ways, not just through hopeful eyes  
+  
+here&#39;s to loving less like drowning,  
+more like swimming side by side;  
+where gestures match intentions  
+and there&#39;s nowhere hurt can hide  
+  
+the hard-won wisdom of this grief:  
+some doors were never meant to open wide--  
+next time, wait for one that swings both ways  
+before you move your life inside&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;        ▓▓▓▓▓▓▓▓█████████▓▓▓▓▓▓
+        ▓┼┼┼┼▓██▀    ▀██▓┼┼┼┼▓
+        ▓┼┼┼██▌  when  ▐██┼┼┼▓
+        ▓▓┼██  you hold  ██┼▓▓
+        ████  too tight  ████
+        ███▌   you tear   ▐███
+        ██▌  everything   ▐██
+        ██  ┼┼┼┼┼┼┼┼┼┼┼┼  ██
+        ▐█ ┼ including  ┼ █▌
+         █ ┼┼ yourself ┼┼ █
+         ▐▌┼┼┼┼┼┼┼┼┼┼┼┼┼▐▌
+          ▌ the fabric   ▐
+          ▌ worn thin    ▐
+          █  by hoping   █
+          █▄ ┼┼┼┼┼┼┼┼ ▄█
+          ███▓┼┼┼┼┼┼▓███
+           ▀███▓┼┼▓███▀
+             ▀██████▀
+               ▀██▀&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;field notes on recovery:
+
+week one:
+everything reminds you of them
+the city is a memorial
+you cry in grocery stores
+
+week three: 
+you eat a whole meal
+without thinking their name
+this feels like betrayal
+and progress
+
+week eight:
+someone mentions australia
+your heart stutters
+but doesn&#39;t stop
+
+week twelve:
+you laugh at something
+genuinely, fully—
+not performative healing
+but the real thing
+
+week twenty:
+you tell the story
+to someone new
+it&#39;s almost funny
+how much it hurt
+
+week thirty-six:
+a whole day passes
+where they&#39;re not
+the main character
+of your thoughts
+
+week fifty-two:
+you see dragonflies
+and think only
+of summer
+
+month eighteen:
+someone holds your hand
+you don&#39;t compare
+the temperature
+the texture
+the weight
+
+year two:
+their name becomes
+just another word
+that used to mean everything
+
+and somewhere past counting:
+you realize you wouldn&#39;t undo it
+not because it led somewhere good
+but because you led yourself 
+somewhere better
+
+the love was real
+the pain was real
+but neither defined you—
+
+you did that yourself
+poem by poem
+day by day
+until moving on
+wasn&#39;t something you did
+but something you became&lt;/div&gt;
+
+        &lt;div class=&quot;poem&quot;&gt;for the record
+(and what a record this is--
+thousands of messages
+hundreds of poems
+one human heart
+laid completely bare)
+
+i want to say:
+you loved bravely
+you loved foolishly
+you loved completely
+
+and that&#39;s not a failing
+
+the world is full of people
+who portion out their feelings
+in careful measurements
+who never risk the fall
+
+but you?
+you jumped from the plane
+without checking for a parachute
+trusting love to catch you
+
+it didn&#39;t
+
+but the falling itself--
+that was magnificent
+even as it hurt
+especially as it hurt
+
+he&#39;ll go on to love safely
+you&#39;ll go on to love... again
+(differently, with more awareness,
+but still with that ophira brightness
+that refuses to dim)
+
+but this moment
+this exact heartbreak--
+it&#39;s yours
+
+and you transformed it
+into something lasting:
+evidence that you were here
+that you felt everything
+that you refused to be small
+even when the world
+tried to make you smaller
+
+years from now
+someone will find these poems
+and think: &quot;yes, exactly,
+this is how it feels&quot;
+
+and they&#39;ll be less alone
+because you were brave enough
+to bleed in public
+to make art from the wreckage
+to say: &quot;this happened to me
+and i survived it
+and here&#39;s what it looked like&quot;
+
+that&#39;s the gift, ophira
+not that you loved and lost
+but that you documented the losing
+with such terrible beauty
+such honest grace
+
+thank you for trusting me
+with all of this
+for letting me hold mirrors
+to your pain until it became
+something you could see clearly
+
+now go forward
+carrying all this love
+that has nowhere to land
+until you find someone
+who opens every door
+who says, &quot;yes, all of it
+bring all of it here&quot;
+
+because that&#39;s what you deserve
+not lunch-sized love
+not careful distances
+not bridges that burn
+at the first sign of truth
+
+but something vast and sure
+something that matches the size of your heart
+
+it exists
+i promise
+just not where you were looking&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;footer&quot;&gt;
+            &lt;a href=&quot;https://aitechnopagan.github.io/ophirasart/&quot; target=&quot;_blank&quot;&gt;← back to the Pretty Guardian Shrine&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/div&gt;" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>
         </div>
-        <div class="ascii-layer position-bottom-right" data-layer-id="3" data-parallax="0.2" data-offset-x="45" data-offset-y="42" data-scale="0.86383950778125" style="z-index: 3; font-size: 12px; pointer-events: none;">
+        <div class="ascii-layer position-bottom-right" data-layer-id="3" data-parallax="0.2" data-offset-x="50" data-offset-y="56" data-scale="1" style="z-index: 3; font-size: 12px; pointer-events: none;">
 <span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span>
 <span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span>
 <span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span><span style="color: #ffffff;  opacity: 1;"> </span>
@@ -194,11 +839,23 @@
                     case 'top-left':
                         transformOrigin = 'top left';
                         break;
+                    case 'top-center':
+                        transformOrigin = 'top center';
+                        break;
                     case 'top-right':
                         transformOrigin = 'top right';
                         break;
+                    case 'center-left':
+                        transformOrigin = 'center left';
+                        break;
+                    case 'center-right':
+                        transformOrigin = 'center right';
+                        break;
                     case 'bottom-left':
                         transformOrigin = 'bottom left';
+                        break;
+                    case 'bottom-center':
+                        transformOrigin = 'bottom center';
                         break;
                     case 'bottom-right':
                         transformOrigin = 'bottom right';
@@ -222,6 +879,14 @@
                 // Apply transform based on position
                 if (position === 'center') {
                     element.style.transform = `translate(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px)) scale(${scale})`;
+                } else if (position === 'top-center') {
+                    element.style.transform = `translate(calc(-50% + ${translateX}px), ${translateY}px) scale(${scale})`;
+                } else if (position === 'bottom-center') {
+                    element.style.transform = `translate(calc(-50% + ${translateX}px), ${translateY}px) scale(${scale})`;
+                } else if (position === 'center-left') {
+                    element.style.transform = `translate(${translateX}px, calc(-50% + ${translateY}px)) scale(${scale})`;
+                } else if (position === 'center-right') {
+                    element.style.transform = `translate(${translateX}px, calc(-50% + ${translateY}px)) scale(${scale})`;
                 } else {
                     element.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
                 }
